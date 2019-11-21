@@ -1,0 +1,2 @@
+include browsers_detector/data/templates/*.JPG
+include browsers_detector/data/screenshots/*.JPG
