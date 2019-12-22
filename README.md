@@ -73,7 +73,7 @@ load_template("chrome_taskbar.JPG")
 
 >  *scale* = the default value is "u" meaning scale up and it could be changed to "d" to scale down. This is used to determine if the main image should be scaled up during the detection process. 
 
->  *threshold* = the threshold determines whether the image is detected or not. The default value is .40
+>  *threshold* = the threshold determines whether the image is detected or not. The default value is .30
  
 > #### This function takes in the template object, screen_shot object, a scale value, and a threshold. This function adopts a [template matching algorithm](https://www.pyimagesearch.com/2015/01/26/multi-scale-template-matching-using-python-opencv/) which optimize the template-matching function from the [OpenCV library](https://docs.opencv.org/master/). The algorithm is basically scaling either up or down while applying the template-matching function and comparing the value of the match to the threshold until the value is greater than or equal to the threshold then the location or coordinates (x, y) of the match is returned with a boolean(next_image) value of False. If the value is less than the threshold then the location would be (0,0) with a next_image boolean of True. the next_image is used to determine if a different image should be used to detect a browser.
 
@@ -141,3 +141,20 @@ open_link("brockport.edu")
 # returns False if url is empty and returns True if the url is not empty
 ```
 
+### open_with_start(url): 
+> *url* = the actual url to be typed into the browser
+
+> #### This function types in the link automatically in the start menu and  it will open the url with the default browser of the system. If the url is empty it returns false and returns True otherwise.
+```python
+open_with_start("suny.brockport.edu") 
+# returns False if url is empty and returns True if the url is not empty
+```
+
+### send_email(message, heading): 
+> *message* = the message to be sent
+> *title* = the title of the message. the default value is "" or an empty string
+
+> #### This function attempts to send an email after a user is logged into their blackboard account
+```python
+send_email("Hello World!", "Hello!") 
+```

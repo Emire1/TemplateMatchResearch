@@ -1,2 +1,8 @@
-\venv
-\.idea
+venv
+.idea
+build
+dist
+.eggs
+MANIFEST.in
+setup.py
+TemplateMatchResearch.egg-info
